@@ -26,7 +26,7 @@ class App extends Component {
 
 		e.preventDefault()
 		
-		if (e.target.name.value === '' && e.target.age.value === '') {
+		if (e.target.name.value === '' || e.target.age.value === '') {
 			alert('Please fill out fields')
 		} else {
 
@@ -121,8 +121,8 @@ class App extends Component {
 				<div className="row">
 					<div className="col-sm-12">
 						<div className="jumbotron">
-							<h1 className="display-4">Todo App</h1>
-							<p className="lead">Daily Life Todo App</p>
+							<h1>Total Todos: { this.state.people.length }</h1>
+							<p>Welcome to Todo App</p>
 						</div>
 						<Form onAdd={this.onAdd} />
 						<Names 
